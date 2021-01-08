@@ -1,0 +1,16 @@
+{
+  "name": "GitHubFileNameClipper",
+  "short_name": "GitHubFileNameClipper",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+  "description": "This plugin copies the filename to the clipboard instead of the file path on the pull request files changed page on GitHub.",
+  "content_scripts": [{
+    "matches": ["https://github.com/*/pull/*"],
+    "js": [
+      "content.js"
+    ],
+    "run_at":"document_idle"
+  }]
+}
+
